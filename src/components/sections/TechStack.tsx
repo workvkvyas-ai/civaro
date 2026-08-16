@@ -1,30 +1,7 @@
 import { technologies } from "@/lib/site-data";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
-
-const technologyLogos: Record<string, string> = {
-  React: "react",
-  "Next.js": "nextdotjs",
-  TypeScript: "typescript",
-  JavaScript: "javascript",
-  "Node.js": "nodedotjs",
-  PHP: "php",
-  MySQL: "mysql",
-  PostgreSQL: "postgresql",
-  WordPress: "wordpress",
-  Shopify: "shopify",
-  Webflow: "webflow",
-  Figma: "figma",
-  "Google Analytics": "googleanalytics",
-  "Google Ads": "googleads",
-  "Meta Ads": "meta",
-  "Search Console": "googlesearchconsole",
-};
-
-const fallbackTechnologyLogos: Record<string, string> = {
-  "Adobe Creative Cloud": "https://img.icons8.com/color/96/adobe-creative-cloud.png",
-  AWS: "https://img.icons8.com/color/96/amazon-web-services.png",
-};
+import { TechnologyLogo } from "@/components/site/TechnologyLogo";
 
 export function TechStack() {
   return (
@@ -39,23 +16,8 @@ export function TechStack() {
               </h3>
               <ul className="mt-5 flex flex-wrap gap-3">
                 {group.items.map((item) => (
-                  <li
-                    key={item}
-                    title={item}
-                    aria-label={item}
-                    className="grid size-16 place-items-center rounded-2xl border border-border bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lift"
-                  >
-                    <img
-                      src={
-                        fallbackTechnologyLogos[item] ??
-                        `https://cdn.simpleicons.org/${technologyLogos[item]}`
-                      }
-                      alt=""
-                      width={32}
-                      height={32}
-                      loading="lazy"
-                      className="size-8 object-contain"
-                    />
+                  <li key={item}>
+                    <TechnologyLogo name={item} />
                   </li>
                 ))}
               </ul>

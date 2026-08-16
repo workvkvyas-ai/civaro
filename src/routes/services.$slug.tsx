@@ -5,6 +5,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 import { ServiceIcon } from "@/components/site/ServiceIcon";
+import { TechnologyLogo } from "@/components/site/TechnologyLogo";
 import { processSteps, services } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services/$slug")({
@@ -118,13 +119,10 @@ function ServiceDetail() {
             <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
               Technology & tools
             </h3>
-            <ul className="mt-4 flex flex-wrap gap-2">
+            <ul className="mt-5 flex flex-wrap gap-3">
               {service.tools.map((t) => (
-                <li
-                  key={t}
-                  className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm text-muted-foreground"
-                >
-                  {t}
+                <li key={t}>
+                  <TechnologyLogo name={t} />
                 </li>
               ))}
             </ul>

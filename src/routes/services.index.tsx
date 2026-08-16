@@ -5,6 +5,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 import { ServiceIcon } from "@/components/site/ServiceIcon";
+import { TechnologyLogo } from "@/components/site/TechnologyLogo";
 import { TechStack } from "@/components/sections/TechStack";
 import { services } from "@/lib/site-data";
 
@@ -100,9 +101,13 @@ function ServicesPage() {
                     </ul>
                   </Block>
                   <Block title="Technology & tools">
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      {service.tools.join(" · ")}
-                    </p>
+                    <ul className="flex flex-wrap gap-3">
+                      {service.tools.map((tool) => (
+                        <li key={tool}>
+                          <TechnologyLogo name={tool} className="size-14 rounded-xl" />
+                        </li>
+                      ))}
+                    </ul>
                   </Block>
                   <Block title="Example results">
                     <ul className="space-y-3 text-sm leading-relaxed text-muted-foreground">
