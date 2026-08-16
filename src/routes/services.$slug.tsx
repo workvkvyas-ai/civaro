@@ -5,8 +5,7 @@ import { PageHero } from "@/components/site/PageHero";
 import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 import { ServiceIcon } from "@/components/site/ServiceIcon";
-import { ProjectCard } from "@/components/site/ProjectCard";
-import { processSteps, projects, services } from "@/lib/site-data";
+import { processSteps, services } from "@/lib/site-data";
 
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {
@@ -18,7 +17,7 @@ export const Route = createFileRoute("/services/$slug")({
     if (!loaderData) {
       return { meta: [{ title: "Service not found" }, { name: "robots", content: "noindex" }] };
     }
-    const t = `${loaderData.service.title} | Northbeam Studio`;
+    const t = `${loaderData.service.title} | Civaro`;
     const d = loaderData.service.description;
     return {
       meta: [
@@ -38,7 +37,7 @@ export const Route = createFileRoute("/services/$slug")({
             "@type": "Service",
             name: loaderData.service.title,
             description: d,
-            provider: { "@type": "Organization", name: "Northbeam Studio" },
+            provider: { "@type": "Organization", name: "Civaro" },
           }),
         },
       ],
@@ -49,7 +48,6 @@ export const Route = createFileRoute("/services/$slug")({
 
 function ServiceDetail() {
   const { service } = Route.useLoaderData();
-  const related = projects.filter((p) => p.slug === service.caseSlug);
   const others = services.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   return (
@@ -152,19 +150,6 @@ function ServiceDetail() {
           </ol>
         </div>
       </section>
-
-      {related.length ? (
-        <section className="bg-secondary/40 px-5 py-20 sm:px-8">
-          <div className="mx-auto max-w-7xl">
-            <h2 className="text-3xl font-semibold sm:text-4xl">Related case study</h2>
-            <div className="mt-10 grid gap-6 lg:grid-cols-2">
-              {related.map((p) => (
-                <ProjectCard key={p.slug} project={p} />
-              ))}
-            </div>
-          </div>
-        </section>
-      ) : null}
 
       <section className="bg-background px-5 py-20 sm:px-8">
         <div className="mx-auto max-w-7xl">
