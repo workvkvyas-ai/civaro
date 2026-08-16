@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/site/Reveal";
-import heroAbstract from "@/assets/hero-abstract.jpg";
+import heroWebsiteCreator from "@/assets/hero-website-creator.svg";
 
 export function Hero() {
   return (
@@ -53,11 +53,11 @@ export function Hero() {
         <Reveal delay={160} className="relative">
           <div className="relative overflow-hidden rounded-3xl border border-border shadow-lift">
             <img
-              src={heroAbstract}
-              alt="Abstract layered planes and grid lines representing design, technology and growth"
-              width={1200}
-              height={1200}
-              className="aspect-square w-full object-cover"
+              src={heroWebsiteCreator}
+              alt="Website creator designing a digital experience"
+              width={500}
+              height={500}
+              className="aspect-square w-full bg-brand-soft/30 object-contain"
             />
             <div className="absolute inset-x-4 bottom-4 grid grid-cols-3 gap-2 rounded-2xl border border-ink-line bg-ink/70 p-4 backdrop-blur-md">
               {[
