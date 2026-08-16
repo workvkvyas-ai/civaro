@@ -28,14 +28,6 @@ export function Footer() {
                 </dd>
               </div>
               <div>
-                <dt className="sr-only">Phone</dt>
-                <dd>
-                  <a className="hover:text-brand-soft" href={`tel:${AGENCY.phone.replace(/[^+\d]/g, "")}`}>
-                    {AGENCY.phone}
-                  </a>
-                </dd>
-              </div>
-              <div>
                 <dt className="sr-only">Location</dt>
                 <dd className="text-ink-muted">{AGENCY.location}</dd>
               </div>
