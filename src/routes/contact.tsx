@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, CheckCircle2, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -80,14 +80,6 @@ function ContactPage() {
                     {AGENCY.email}
                   </a>
                 </ContactDetail>
-                <ContactDetail icon={Phone} label="Phone">
-                  <a
-                    href={`tel:${AGENCY.phone.replace(/[^+\d]/g, "")}`}
-                    className="transition-colors hover:text-brand-soft"
-                  >
-                    {AGENCY.phone}
-                  </a>
-                </ContactDetail>
                 <ContactDetail icon={MapPin} label="Location">
                   <span>{AGENCY.location}</span>
                 </ContactDetail>
@@ -125,9 +117,6 @@ function ContactPage() {
                     required
                     className="h-12"
                   />
-                </Field>
-                <Field label="Phone" htmlFor="phone">
-                  <Input id="phone" name="phone" type="tel" autoComplete="tel" className="h-12" />
                 </Field>
                 <Field label="Company" htmlFor="company">
                   <Input

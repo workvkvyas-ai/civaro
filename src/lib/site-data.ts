@@ -7,8 +7,7 @@ export const AGENCY = {
   name: "Civaro",
   tagline: "Design better. Build smarter. Grow faster.",
   email: "hello@civaro.ca",
-  phone: "+1 (587) 555-0142",
-  location: "Edmonton, AB — working worldwide",
+  location: "Calgary, AB — working worldwide",
 };
 
 export type Service = {

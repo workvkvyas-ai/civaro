@@ -113,8 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "Civaro",
           description:
             "Full-service digital agency offering full-stack development, web development, UX/UI design, digital marketing, reputation management and graphic design.",
-          email: "hello@northbeamstudio.com",
-          telephone: "+1 (587) 555-0142",
+          email: "hello@civaro.ca",
           areaServed: "Worldwide",
         }),
       },
