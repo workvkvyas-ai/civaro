@@ -2,17 +2,11 @@ import { Link } from "@tanstack/react-router";
 import { AGENCY, services } from "@/lib/site-data";
 import { Logo } from "./Logo";
 
-const company = [
-  { label: "Contact", to: "/contact" as const },
-];
-
-const social = ["LinkedIn", "Instagram", "Facebook", "Behance"];
-
 export function Footer() {
   return (
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div className="max-w-sm">
             <Logo dark />
             <p className="mt-5 text-sm leading-relaxed text-ink-muted">
@@ -48,28 +42,18 @@ export function Footer() {
             ))}
           </FooterCol>
 
-          <FooterCol title="Company">
-            {company.map((c) => (
-              <li key={c.label}>
-                <Link to={c.to} className="text-ink-muted transition-colors hover:text-ink-foreground">
-                  {c.label}
-                </Link>
-              </li>
-            ))}
-          </FooterCol>
-
           <FooterCol title="Connect">
-            {social.map((s) => (
-              <li key={s}>
-                <a
-                  href="#"
-                  className="text-ink-muted transition-colors hover:text-ink-foreground"
-                  aria-label={`${AGENCY.name} on ${s}`}
-                >
-                  {s}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a
+                href="https://www.linkedin.com/company/civaroca"
+                target="_blank"
+                rel="noreferrer"
+                className="text-ink-muted transition-colors hover:text-ink-foreground"
+                aria-label={`${AGENCY.name} on LinkedIn`}
+              >
+                LinkedIn
+              </a>
+            </li>
           </FooterCol>
         </div>
 
