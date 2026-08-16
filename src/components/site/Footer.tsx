@@ -3,11 +3,6 @@ import { AGENCY, services } from "@/lib/site-data";
 import { Logo } from "./Logo";
 
 const company = [
-  { label: "About", to: "/about" as const },
-  { label: "Work", to: "/work" as const },
-  { label: "Process", to: "/process" as const },
-  { label: "Insights", to: "/insights" as const },
-  { label: "Careers", to: "/about" as const },
   { label: "Contact", to: "/contact" as const },
 ];
 

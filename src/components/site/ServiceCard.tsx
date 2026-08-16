@@ -8,7 +8,7 @@ export function ServiceCard({ service }: { service: Service }) {
     <Link
       to="/services/$slug"
       params={{ slug: service.slug }}
-      className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lift sm:p-8"
+      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lift sm:p-8"
     >
       <span
         aria-hidden="true"

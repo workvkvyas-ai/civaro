@@ -4,7 +4,7 @@ import caseProfessional from "@/assets/case-professional.jpg";
 import caseLocal from "@/assets/case-local.jpg";
 
 export const AGENCY = {
-  name: "Northbeam Studio",
+  name: "Civaro",
   tagline: "Design better. Build smarter. Grow faster.",
   email: "hello@northbeamstudio.com",
   phone: "+1 (587) 555-0142",

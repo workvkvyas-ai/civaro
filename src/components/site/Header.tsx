@@ -8,10 +8,6 @@ import { Logo } from "./Logo";
 const nav = [
   { label: "Home", to: "/" },
   { label: "Services", to: "/services" },
-  { label: "Work", to: "/work" },
-  { label: "About", to: "/about" },
-  { label: "Process", to: "/process" },
-  { label: "Insights", to: "/insights" },
   { label: "Contact", to: "/contact" },
 ] as const;
 

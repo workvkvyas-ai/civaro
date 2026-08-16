@@ -4,17 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { Stats } from "@/components/sections/Stats";
-import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { Industries } from "@/components/sections/Industries";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { TechStack } from "@/components/sections/TechStack";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { ServiceCard } from "@/components/site/ServiceCard";
-import { ProjectCard } from "@/components/site/ProjectCard";
-import { BlogCard } from "@/components/site/BlogCard";
 import { CTASection } from "@/components/site/CTASection";
 import { Reveal } from "@/components/site/Reveal";
-import { benefits, posts, projects, services } from "@/lib/site-data";
+import { benefits, services } from "@/lib/site-data";
 import aboutStudio from "@/assets/about-studio.jpg";
 
 const title = "Digital Agency | Web Development, UX Design & Marketing";
@@ -68,28 +65,6 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-secondary/40 px-5 py-24 sm:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="Selected Work"
-            title="Selected Work"
-            intro="Digital experiences designed to create real business impact."
-            action={
-              <Button asChild variant="quiet" size="xl">
-                <Link to="/work">View All Work</Link>
-              </Button>
-            }
-          />
-          <div className="mt-14 grid gap-6 lg:grid-cols-2">
-            {projects.map((project, i) => (
-              <Reveal key={project.slug} delay={i * 80}>
-                <ProjectCard project={project} />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-background px-5 py-24 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.95fr_1.05fr]">
           <Reveal>
@@ -112,7 +87,6 @@ function Index() {
         </div>
       </section>
 
-      <ProcessTimeline />
       <Stats />
       <Industries />
       <Testimonials />
@@ -142,37 +116,7 @@ function Index() {
               Our goal is simple: help businesses create better digital experiences and turn those
               experiences into measurable growth.
             </p>
-            <Button asChild variant="brand" size="xl" className="mt-9">
-              <Link to="/about">
-                Learn About Us
-                <ArrowRight className="size-4" />
-              </Link>
-            </Button>
           </Reveal>
-        </div>
-      </section>
-
-      <section className="bg-background px-5 py-24 sm:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading
-            eyebrow="Insights"
-            title="Ideas, Insights & Strategies"
-            action={
-              <Button asChild variant="link" size="xl" className="px-0">
-                <Link to="/insights">
-                  View All Insights
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
-            }
-          />
-          <div className="mt-14 grid gap-10 md:grid-cols-3">
-            {posts.map((post, i) => (
-              <Reveal key={post.slug} delay={i * 90} className="h-full">
-                <BlogCard post={post} />
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
 

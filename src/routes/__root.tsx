@@ -80,15 +80,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Northbeam Studio | Digital Agency" },
+      { title: "Civaro | Digital Agency" },
       {
         name: "description",
         content:
           "Full-service digital agency for web development, UX/UI design, digital marketing, reputation management and graphic design.",
       },
-      { name: "author", content: "Northbeam Studio" },
+      { name: "author", content: "Civaro" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Northbeam Studio" },
+      { property: "og:site_name", content: "Civaro" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -102,7 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
     scripts: [
       {
@@ -110,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: "Northbeam Studio",
+          name: "Civaro",
           description:
             "Full-service digital agency offering full-stack development, web development, UX/UI design, digital marketing, reputation management and graphic design.",
           email: "hello@northbeamstudio.com",

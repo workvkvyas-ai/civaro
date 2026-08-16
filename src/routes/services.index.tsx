@@ -6,7 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { CTASection } from "@/components/site/CTASection";
 import { ServiceIcon } from "@/components/site/ServiceIcon";
 import { TechStack } from "@/components/sections/TechStack";
-import { projects, services } from "@/lib/site-data";
+import { services } from "@/lib/site-data";
 
 const title = "Services | Development, Design, Marketing & Reputation";
 const description =
@@ -47,7 +47,6 @@ function ServicesPage() {
       <div className="bg-background px-5 sm:px-8">
         <div className="mx-auto max-w-7xl">
           {services.map((service, index) => {
-            const related = projects.find((p) => p.slug === service.caseSlug);
             return (
               <section
                 key={service.slug}
@@ -112,25 +111,6 @@ function ServicesPage() {
                       ))}
                     </ul>
                   </Block>
-                  {related ? (
-                    <div className="sm:col-span-2">
-                      <Link
-                        to="/work/$slug"
-                        params={{ slug: related.slug }}
-                        className="group flex flex-col gap-2 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-brand/40 sm:flex-row sm:items-center sm:justify-between"
-                      >
-                        <span>
-                          <span className="block text-[0.7rem] uppercase tracking-[0.2em] text-muted-foreground">
-                            Related case study
-                          </span>
-                          <span className="mt-2 block font-display text-lg font-semibold">
-                            {related.client} — {related.result}
-                          </span>
-                        </span>
-                        <ArrowRight className="size-5 text-muted-foreground transition-transform group-hover:translate-x-1 group-hover:text-brand" />
-                      </Link>
-                    </div>
-                  ) : null}
                 </Reveal>
               </section>
             );

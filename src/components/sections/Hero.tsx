@@ -41,9 +41,6 @@ export function Hero() {
                   <ArrowRight className="size-4" />
                 </Link>
               </Button>
-              <Button asChild variant="quiet" size="xl">
-                <Link to="/work">View Our Work</Link>
-              </Button>
             </div>
           </Reveal>
           <Reveal delay={280}>
