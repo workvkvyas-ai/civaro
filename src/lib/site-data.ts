@@ -510,14 +510,3 @@ export const technologies = [
   { group: "Marketing", items: ["Google Analytics", "Google Ads", "Meta Ads", "Search Console"] },
   { group: "Cloud", items: ["AWS"] },
 ];
-
-export const clientLogos = [
-  "Meridian",
-  "Halden",
-  "Kestrel",
-  "Rowan",
-  "Northline",
-  "Balmore",
-  "Verity",
-  "Copperfield",
-];

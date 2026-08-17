@@ -1,5 +1,13 @@
-import { clientLogos } from "@/lib/site-data";
 import { Reveal } from "@/components/site/Reveal";
+import oizomLogo from "@/assets/client-oizom.png";
+import intelLogo from "@/assets/client-intel.png";
+import fastSignsLogo from "@/assets/client-fastsigns.png";
+
+const clientLogos = [
+  { name: "Oizom", src: oizomLogo },
+  { name: "Intel", src: intelLogo },
+  { name: "FASTSIGNS", src: fastSignsLogo },
+];
 
 export function TrustBar() {
   return (
@@ -9,13 +17,20 @@ export function TrustBar() {
           <p className="text-center text-sm text-muted-foreground">
             Trusted by ambitious businesses and growing brands.
           </p>
-          <ul className="mt-8 grid grid-cols-2 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
+          <ul className="mx-auto mt-8 grid max-w-3xl grid-cols-1 items-center gap-8 sm:grid-cols-3">
             {clientLogos.map((logo) => (
               <li
-                key={logo}
-                className="text-center font-display text-lg font-semibold tracking-tight text-muted-foreground/55 transition-colors duration-300 hover:text-foreground"
+                key={logo.name}
+                className="flex h-16 items-center justify-center"
               >
-                {logo}
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  width={300}
+                  height={100}
+                  loading="lazy"
+                  className="max-h-14 w-auto max-w-full object-contain transition-transform duration-300 hover:scale-105"
+                />
               </li>
             ))}
           </ul>
