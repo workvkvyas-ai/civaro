@@ -33,7 +33,13 @@ export function CTASection({
                 <Link to="/contact">{primary}</Link>
               </Button>
               <Button asChild variant="inkOutline" size="xl" className="w-full sm:w-auto">
-                <Link to="/contact">{secondary}</Link>
+                <a
+                  href="https://calendly.com/hello-civaro/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {secondary}
+                </a>
               </Button>
             </div>
           </div>

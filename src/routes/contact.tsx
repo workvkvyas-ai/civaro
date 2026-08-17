@@ -69,7 +69,7 @@ function ContactPage() {
       <section className="bg-background px-5 pb-24 sm:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
           <Reveal>
-            <div className="rounded-3xl bg-ink p-7 text-ink-foreground sm:p-9">
+            <div className="mt-8 rounded-3xl bg-ink p-7 text-ink-foreground sm:p-9">
               <p className="text-sm leading-relaxed text-ink-muted">
                 Have a question before you begin? Reach out directly and we'll help you find the
                 right service.
